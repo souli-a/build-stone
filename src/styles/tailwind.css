@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Colors. */
+  --color-dark: #1d2328;
+  --color-light: #efefef;
+  --color-primary: #bc5431;
+  --color-green: #9fef00;
+  --color-light-grey: #e9e9e9;
+
+  /* Desktop font sizes. */
+  --text-title-desktop-1: 54px;
+  --text-title-desktop-2: 45px;
+  --text-title-desktop-3: 37px;
+  --text-title-desktop-4: 31px;
+  --text-title-desktop-5: 26px;
+  --text-title-desktop-6: 22px;
+  --text-body-desktop: 18px;
+
+  /* Mobile font sizes. */
+  --text-title-mobile-1: 28px;
+  --text-title-mobile-2: 22px;
+  --text-title-mobile-3: 15px;
+  --text-body-mobile: 12px;
+
+  /* Font weights for mobile and desktop. */
+  --font-weight-title-desktop: 700; /* Bold. */
+  --font-weight-body-desktop: 500; /* Medium. */
+  --font-weight-title-mobile: 700; /* Bold. */
+  --font-weight-body-mobile: 400; /* Regular. */
+}
