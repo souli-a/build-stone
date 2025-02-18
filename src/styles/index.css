@@ -1,18 +1,15 @@
 @import './tailwind.css';
 
-@font-face {
-  font-family: 'Unbounded';
-  src: url('fonts/unbounded-variable.woff2') format('woff2');
-}
-
 body {
-  font-family: 'Unbounded';
+  font-family: 'Unbounded', sans-serif;
 }
 
 html,
 body,
 #root {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 html {

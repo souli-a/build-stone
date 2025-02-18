@@ -9,19 +9,19 @@
   --color-light-grey: #e9e9e9;
 
   /* Desktop font sizes. */
-  --text-title-desktop-1: 54px;
-  --text-title-desktop-2: 45px;
-  --text-title-desktop-3: 37px;
-  --text-title-desktop-4: 31px;
-  --text-title-desktop-5: 26px;
-  --text-title-desktop-6: 22px;
-  --text-body-desktop: 18px;
+  --text-title-desktop-1: 3.375rem; /* 54px. */
+  --text-title-desktop-2: 2.813rem; /* 45px. */
+  --text-title-desktop-3: 2.313rem; /* 37px. */
+  --text-title-desktop-4: 1.938rem; /* 31px. */
+  --text-title-desktop-5: 1.625rem; /* 26px. */
+  --text-title-desktop-6: 1.375rem; /* 22px. */
+  --text-body-desktop: 1.125rem; /* 18px. */
 
   /* Mobile font sizes. */
-  --text-title-mobile-1: 28px;
-  --text-title-mobile-2: 22px;
-  --text-title-mobile-3: 15px;
-  --text-body-mobile: 12px;
+  --text-title-mobile-1: 1.75rem; /* 28px. */
+  --text-title-mobile-2: 1.375rem; /* 22px. */
+  --text-title-mobile-3: 0.938rem; /* 15px. */
+  --text-body-mobile: 0.75rem; /* 12px. */
 
   /* Font weights for mobile and desktop. */
   --font-weight-title-desktop: 700; /* Bold. */
