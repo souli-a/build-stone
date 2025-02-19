@@ -6,7 +6,7 @@ import ClipboardButton from './ClipboardButton';
 const ContactInfo = () => {
   const handleCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
     copyButtonValue(e);
-    toast.success('Copié dans le presse-papiers !', {
+    toast.success('Copié !', {
       duration: 1000,
       position: 'top-center',
       icon: <CircleCheck color="var(--color-green)" size={20} />,
