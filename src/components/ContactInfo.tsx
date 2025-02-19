@@ -1,6 +1,7 @@
 import { CircleCheck, Mail, PhoneForwarded } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 import copyButtonValue from '../utils/copyValueToClipboard';
+import ClipboardButton from './ClipboardButton';
 
 const ContactInfo = () => {
   const handleCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -8,8 +9,6 @@ const ContactInfo = () => {
     toast.success('Copié dans le presse-papiers !', {
       duration: 1000,
       position: 'top-center',
-      className:
-        'flex flex-row gap-[var(--spacing-md)] items-center text-body-desktop',
       icon: <CircleCheck color="var(--color-green)" size={20} />,
       removeDelay: 1000,
       style: {
@@ -24,21 +23,15 @@ const ContactInfo = () => {
     <address className="not-italic flex flex-row gap-[var(--spacing-2xl)] text-body-desktop">
       <div className="flex flex-row gap-[var(--spacing-md)] items-center">
         <Mail color="var(--color-primary)" size={20} />
-        <button
-          onClick={handleCopy}
-          className="select-auto"
-          value="example@example.com">
+        <ClipboardButton handleCopy={handleCopy} value="example@example.com">
           example@example.com
-        </button>
+        </ClipboardButton>
       </div>
       <div className="flex flex-row gap-[var(--spacing-md)] items-center">
         <PhoneForwarded color="var(--color-primary)" size={20} />
-        <button
-          onClick={handleCopy}
-          className="select-auto"
-          value="+33612345678">
+        <ClipboardButton handleCopy={handleCopy} value="+33612345678">
           +33612345678
-        </button>
+        </ClipboardButton>
         <Toaster gutter={10} />
       </div>
     </address>

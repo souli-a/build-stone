@@ -1,0 +1,17 @@
+const ClipboardButton = ({
+  handleCopy,
+  value,
+  children,
+}: {
+  handleCopy: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  value: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <button onClick={handleCopy} className="select-auto" value={value}>
+      {children}
+    </button>
+  );
+};
+
+export default ClipboardButton;
