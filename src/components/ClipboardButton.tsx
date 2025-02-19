@@ -8,7 +8,10 @@ const ClipboardButton = ({
   children: React.ReactNode;
 }) => {
   return (
-    <button onClick={handleCopy} className="select-auto" value={value}>
+    <button
+      onClick={handleCopy}
+      className="select-auto flex flex-row gap-[var(--spacing-md)] items-center"
+      value={value}>
       {children}
     </button>
   );

@@ -21,19 +21,15 @@ const ContactInfo = () => {
 
   return (
     <address className="not-italic flex flex-row gap-[var(--spacing-2xl)] text-body-desktop">
-      <div className="flex flex-row gap-[var(--spacing-md)] items-center">
+      <Toaster gutter={10} />
+      <ClipboardButton handleCopy={handleCopy} value="example@example.com">
         <Mail color="var(--color-primary)" size={20} />
-        <ClipboardButton handleCopy={handleCopy} value="example@example.com">
-          example@example.com
-        </ClipboardButton>
-      </div>
-      <div className="flex flex-row gap-[var(--spacing-md)] items-center">
+        example@example.com
+      </ClipboardButton>
+      <ClipboardButton handleCopy={handleCopy} value="+33612345678">
         <PhoneForwarded color="var(--color-primary)" size={20} />
-        <ClipboardButton handleCopy={handleCopy} value="+33612345678">
-          +33612345678
-        </ClipboardButton>
-        <Toaster gutter={10} />
-      </div>
+        +33612345678
+      </ClipboardButton>
     </address>
   );
 };
