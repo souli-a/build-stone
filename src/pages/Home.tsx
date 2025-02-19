@@ -1,9 +1,12 @@
-import ContactInfo from '../components/ContactInfo';
+import Header from '../components/Header';
 
 const Home = () => {
   return (
-    <div className="flex text-dark bg-light h-full w-full">
-      <ContactInfo />
+    <div className="flex flex-col text-dark bg-light h-full w-full">
+      <Header />
+      <div className="h-full w-full flex justify-center items-center text-title-desktop-1">
+        EMPTY AREA.
+      </div>
     </div>
   );
 };
