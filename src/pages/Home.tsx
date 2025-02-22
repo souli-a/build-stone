@@ -1,4 +1,5 @@
 import { Heart } from 'lucide-react';
+import ButtonCTA from '../components/ButtonCTA';
 import Header from '../components/Header';
 import PrimaryColorSpan from '../components/PrimaryColorSpan';
 import Heading1 from './../components/Heading1';
@@ -24,6 +25,9 @@ const Home = () => {
               <PrimaryColorSpan>durables</PrimaryColorSpan>
             </Heading1>
           </div>
+          <ButtonCTA className="mt-2 magnetic-element">
+            OBTENEZ UN DEVIS GRATUIT — DÈS MAINTENANT
+          </ButtonCTA>
         </section>
       </div>
     </div>
