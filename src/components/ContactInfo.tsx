@@ -23,11 +23,15 @@ const ContactInfo = () => {
     <address className="not-italic flex flex-row gap-[var(--spacing-2xl)] text-body-desktop">
       <Toaster gutter={10} />
       <ClipboardButton handleCopy={handleCopy} value="example@example.com">
-        <Mail color="var(--color-primary)" size={20} />
+        <Mail color="var(--color-primary)" size={20} strokeWidth={3} />
         example@example.com
       </ClipboardButton>
       <ClipboardButton handleCopy={handleCopy} value="+33612345678">
-        <PhoneForwarded color="var(--color-primary)" size={20} />
+        <PhoneForwarded
+          color="var(--color-primary)"
+          size={20}
+          strokeWidth={3}
+        />
         +33612345678
       </ClipboardButton>
     </address>
