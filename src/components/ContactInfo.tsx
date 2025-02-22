@@ -9,12 +9,17 @@ const ContactInfo = () => {
     toast.success('Copié !', {
       duration: 1000,
       position: 'top-center',
-      icon: <CircleCheck color="var(--color-green)" size={20} />,
+      icon: (
+        <CircleCheck color="var(--color-green)" size={20} strokeWidth={3} />
+      ),
       removeDelay: 1000,
       style: {
+        borderRadius: 'var(--border-radius)',
+        boxShadow: 'none',
+        border: '1px solid var(--color-grey-border)',
         maxWidth: 'fit-content',
         padding: 'var(--spacing-xl)',
-        backgroundColor: 'var(--color-light)',
+        backgroundColor: 'var(--color-light-grey)',
       },
     });
   };
