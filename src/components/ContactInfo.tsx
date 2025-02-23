@@ -1,7 +1,7 @@
 import { CircleCheck, Mail, PhoneForwarded } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 import copyButtonValue from '../utils/copyValueToClipboard';
-import ClipboardButton from './ClipboardButton';
+import ClipboardButton from './ui/ClipboardButton';
 
 const ContactInfo = () => {
   const handleCopy = (e: React.MouseEvent<HTMLButtonElement>) => {

@@ -1,10 +1,10 @@
 import { Heart } from 'lucide-react';
-import ButtonCTA from '../components/ButtonCTA';
 import Header from '../components/Header';
-import PrimaryColorSpan from '../components/PrimaryColorSpan';
-import TextBodyDesktop from '../components/TextBodyDesktop';
-import Heading1 from './../components/Heading1';
-import Heading6 from './../components/Heading6';
+import ButtonCTA from '../components/ui/ButtonCTA';
+import Heading1 from '../components/ui/Heading1';
+import Heading6 from '../components/ui/Heading6';
+import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
+import TextBodyDesktop from '../components/ui/TextBodyDesktop';
 
 const Home = () => {
   return (
