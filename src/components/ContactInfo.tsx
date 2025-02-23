@@ -25,6 +25,7 @@ const ContactInfo = () => {
   };
 
   return (
+    // I choose to use the text-body-desktop class here instead of put it in each component.
     <address className="not-italic flex flex-row gap-[var(--spacing-2xl)] text-body-desktop">
       <Toaster gutter={10} />
       <ClipboardButton handleCopy={handleCopy} value="example@example.com">

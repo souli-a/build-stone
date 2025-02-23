@@ -7,7 +7,7 @@ const Heading1 = ({
 }) => {
   return (
     <h1
-      className={`text-title-desktop-1 font-bold leading-[var(--line-height-title-desktop-1)] ${
+      className={`text-title-desktop-1 font-title-desktop leading-[var(--line-height-title-desktop-1)] ${
         className || ''
       }`}>
       {children}

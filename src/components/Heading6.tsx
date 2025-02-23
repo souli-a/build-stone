@@ -6,7 +6,8 @@ const Heading6 = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h6 className={`text-title-desktop-6 font-bold ${className || ''}`}>
+    <h6
+      className={`text-title-desktop-6 font-title-desktop ${className || ''}`}>
       {children}
     </h6>
   );
