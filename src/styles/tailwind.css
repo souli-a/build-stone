@@ -32,7 +32,7 @@
   --font-weight-body-mobile: 400; /* Regular. */
 
   /* Border radius. */
-  --border-radius: 12px;
+  --border-radius-button: 12px;
 
   /* Spacing. */
   --spacing-sm: 0.25rem; /* 4px. */
@@ -40,17 +40,21 @@
   --spacing-lg: 0.75rem; /* 12px. */
   --spacing-xl: 1rem; /* 16px. */
   --spacing-2xl: 1.25rem; /* 20px. */
-  --spacing-3xl: 1.5rem; /* 24px. */
-  --spacing-4xl: 1.75rem; /* 28px. */
-  --spacing-5xl: 2rem; /* 32px. */
-  --spacing-6xl: 2.25rem; /* 36px. */
-  --spacing-7xl: 2.5rem; /* 40px. */
-  --spacing-8xl: 2.75rem; /* 44px. */
-  --spacing-9xl: 3rem; /* 48px. */
-  --spacing-10xl: 3.25rem; /* 52px. */
-  --spacing-11xl: 3.5rem; /* 56px. */
-  --spacing-12xl: 3.75rem; /* 60px. */
+  --spacing-3xl: 1.75rem; /* 28px. */
 
   /* Line height. */
+  --line-height-body-desktop: 1.85rem; /* 29.6px. */
   --line-height-title-desktop-1: 4.5rem; /* 72px. */
+
+  /* Transition. */
+  --animate-bouncing: bouncing 1.5s cubic-bezier(1, 0.36, 0.59, 1) 0s infinite
+    alternate;
+  @keyframes bouncing {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(3rem);
+    }
+  }
 }

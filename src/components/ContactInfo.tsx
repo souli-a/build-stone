@@ -14,7 +14,7 @@ const ContactInfo = () => {
       ),
       removeDelay: 1000,
       style: {
-        borderRadius: 'var(--border-radius)',
+        borderRadius: 'var(--border-radius-button)',
         boxShadow: 'none',
         border: '1px solid var(--color-grey-border)',
         maxWidth: 'fit-content',

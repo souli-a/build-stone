@@ -10,7 +10,7 @@ const ClipboardButton = ({
   return (
     <button
       onClick={handleCopy}
-      className="w-fit h-fit select-auto flex flex-row gap-[var(--spacing-md)] items-center cursor-pointer magnetic-element"
+      className="select-auto flex flex-row gap-[var(--spacing-md)] items-center cursor-pointer magnetic-element"
       value={value}>
       {children}
     </button>

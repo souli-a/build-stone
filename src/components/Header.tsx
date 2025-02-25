@@ -2,7 +2,7 @@ import ContactInfo from './ContactInfo';
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between p-[var(--spacing-4xl)]">
+    <header className="flex items-center justify-between p-[var(--spacing-3xl)]">
       <a
         href="/"
         className="magnetic-element"
