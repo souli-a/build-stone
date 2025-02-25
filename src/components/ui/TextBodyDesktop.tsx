@@ -6,7 +6,10 @@ const TextBodyDesktop = ({
   className?: string;
 }) => {
   return (
-    <p className={`text-body-desktop font-body-desktop ${className || ''}`}>
+    <p
+      className={`text-body-desktop font-body-desktop leading-[var(--line-height-body-desktop)] ${
+        className || ''
+      }`}>
       {children}
     </p>
   );

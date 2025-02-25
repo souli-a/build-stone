@@ -1,4 +1,4 @@
-const PrimaryColorSpan = ({ children }: { children: string }) => {
+const PrimaryColorSpan = ({ children }: { children: React.ReactNode }) => {
   return <span className="text-primary">{children}</span>;
 };
 
