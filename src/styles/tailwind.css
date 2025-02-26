@@ -6,8 +6,8 @@
   --color-light: #efefef;
   --color-primary: #bc5431;
   --color-green: #6ade6b;
-  --color-light-grey: #ebebeb;
-  --color-grey-border: #e6e6e6;
+  --color-light-grey: #e6e6e6;
+  --color-grey-border: #d9d9d9;
   --color-pink: #f91880;
 
   /* Desktop font sizes. */
@@ -45,6 +45,9 @@
   /* Line height. */
   --line-height-body-desktop: 1.85rem; /* 29.6px. */
   --line-height-title-desktop-1: 4.5rem; /* 72px. */
+
+  /* Width container. */
+  --width-container: 60rem;
 
   /* Transition. */
   --animate-bouncing: bouncing 1.5s cubic-bezier(1, 0.36, 0.59, 1) 0s infinite

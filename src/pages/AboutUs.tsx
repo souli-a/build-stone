@@ -6,7 +6,7 @@ import TextBodyDesktop from '../components/ui/TextBodyDesktop';
 const AboutUs = () => {
   return (
     <div className="flex justify-center">
-      <article className="w-[40rem] text-balance">
+      <article className="w-[var(--width-container)] text-balance">
         <div className="flex flex-col gap-[var(--spacing-2xl)]">
           <Heading1 className="mb-[-1rem]">
             <PrimaryColorSpan>Build Stone</PrimaryColorSpan>
