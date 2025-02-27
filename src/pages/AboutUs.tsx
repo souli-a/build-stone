@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <div className="flex justify-center">
       <article className="w-[var(--width-container)] text-balance">
-        <div className="flex flex-col gap-[var(--spacing-2xl)]">
+        <div className="flex flex-col gap-[var(--spacing-3xl)]">
           <Heading1 className="mb-[-1rem]">
             <PrimaryColorSpan>Build Stone</PrimaryColorSpan>
           </Heading1>
