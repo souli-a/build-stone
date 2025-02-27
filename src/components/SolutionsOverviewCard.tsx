@@ -1,5 +1,5 @@
-import Heading3 from './Heading3';
-import PrimaryColorSpan from './PrimaryColorSpan';
+import Heading3 from './ui/Heading3';
+import PrimaryColorSpan from './ui/PrimaryColorSpan';
 
 const SolutionsOverviewCard = ({
   title,

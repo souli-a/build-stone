@@ -1,6 +1,6 @@
+import SolutionsOverviewCard from '../components/SolutionsOverviewCard';
 import Heading1 from '../components/ui/Heading1';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
-import SolutionsOverviewCard from '../components/ui/SolutionsOverviewCard';
 import TextBodyDesktop from '../components/ui/TextBodyDesktop';
 
 const solutions = {
