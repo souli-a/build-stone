@@ -5,11 +5,12 @@ import Heading1 from '../components/ui/Heading1';
 import Heading6 from '../components/ui/Heading6';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
 import TextBodyDesktop from '../components/ui/TextBodyDesktop';
+import aboutUsPageRef from '../utils/aboutUsPageRef.ts';
+import smoothScrollTo from '../utils/smoothScrollTo';
 
 const Home = () => {
   return (
     <div className="flex flex-col min-h-dvh">
-      <title>Build Stone</title>
       <Header />
       <div className="flex justify-center items-center flex-1 flex-col">
         <section className="h-fit max-w-[60rem] flex flex-col gap-[var(--spacing-3xl)] items-center">
@@ -29,13 +30,15 @@ const Home = () => {
             OBTENEZ UN DEVIS GRATUIT — DÈS MAINTENANT
           </ButtonCTA>
         </section>
-        <div className="cursor-pointer group animate-bouncing hover:[animation-play-state:paused] absolute mt-180 hover:bg-dark transition-all ease-in-out duration-300 rounded-full p-5">
+        <button
+          onClick={() =>
+            smoothScrollTo(aboutUsPageRef as React.RefObject<HTMLElement>)
+          }>
           <ArrowDown
             size={70}
             strokeWidth={4}
-            className="group-hover:stroke-light transition-all ease-in-out duration-300"
           />
-        </div>
+        </button>
       </div>
     </div>
   );

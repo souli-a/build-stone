@@ -2,10 +2,11 @@ import Heading1 from '../components/ui/Heading1';
 import Heading6 from '../components/ui/Heading6';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
 import TextBodyDesktop from '../components/ui/TextBodyDesktop';
+import aboutUsPageRef from '../utils/aboutUsPageRef.ts';
 
 const AboutUs = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center" ref={aboutUsPageRef}>
       <article className="w-[var(--width-container)] text-balance">
         <div className="flex flex-col gap-[var(--spacing-3xl)]">
           <Heading1 className="mb-[-1rem]">
