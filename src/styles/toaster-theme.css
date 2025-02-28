@@ -1,0 +1,39 @@
+[data-sonner-toaster][data-sonner-theme='light'] {
+  --normal-bg: var(--color-light-grey);
+  --normal-border: var(--color-grey-border);
+  --normal-text: var(--color-dark);
+  --normal-bg-hover: none;
+  --normal-border-hover: none;
+  --success-bg: none;
+  --success-border: none;
+  --success-text: none;
+  --info-bg: none;
+  --info-border: none;
+  --info-text: none;
+  --warning-bg: none;
+  --warning-border: none;
+  --warning-text: none;
+  --error-bg: none;
+  --error-border: none;
+  --error-text: none;
+}
+
+[data-sonner-toaster][data-sonner-theme='dark'] {
+  --normal-bg: var(--color-surface-dark-mode);
+  --normal-border: var(--color-border-dark-mode);
+  --normal-text: var(--color-light);
+  --normal-bg-hover: none;
+  --normal-border-hover: none;
+  --success-bg: none;
+  --success-border: none;
+  --success-text: none;
+  --info-bg: none;
+  --info-border: none;
+  --info-text: none;
+  --warning-bg: none;
+  --warning-border: none;
+  --warning-text: none;
+  --error-bg: none;
+  --error-border: none;
+  --error-text: none;
+}

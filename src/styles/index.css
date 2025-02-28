@@ -1,4 +1,5 @@
 @import './tailwind.css';
+@import './toaster-theme.css';
 
 @font-face {
   font-family: 'Unbounded';

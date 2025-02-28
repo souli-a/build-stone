@@ -8,12 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@anatoliygatt/use-prefers-color-scheme": "^1.0.10",
     "@tailwindcss/vite": "^4.0.9",
     "gsap": "^3.12.7",
     "lucide-react": "^0.476.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-hot-toast": "^2.5.2",
+    "sonner": "^2.0.1",
     "tailwindcss": "^4.0.9"
   },
   "devDependencies": {

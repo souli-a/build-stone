@@ -3,6 +3,8 @@
 @theme {
   /* Colors. */
   --color-dark: #1d2328;
+  --color-surface-dark-mode: #1b2126;
+  --color-border-dark-mode: #262c31;
   --color-light: #efefef;
   --color-primary: #bc5431;
   --color-green: #6ade6b;
@@ -43,7 +45,7 @@
   --spacing-3xl: 1.75rem; /* 28px. */
 
   /* Line height. */
-  --line-height-body-desktop: 2rem; /* 29.6px. */
+  --line-height-body-desktop: 2.5rem; /* 29.6px. */
   --line-height-title-desktop-1: 4.5rem; /* 72px. */
 
   /* Width container. */
