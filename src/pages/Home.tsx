@@ -31,12 +31,14 @@ const Home = () => {
           </ButtonCTA>
         </section>
         <button
+          className="cursor-pointer group animate-bouncing hover:[animation-play-state:paused] absolute mt-180 hover:bg-dark transition-all ease-in-out duration-300 rounded-full p-5 dark:hover:bg-light"
           onClick={() =>
             smoothScrollTo(aboutUsPageRef as React.RefObject<HTMLElement>)
           }>
           <ArrowDown
             size={70}
             strokeWidth={4}
+            className="group-hover:stroke-light transition-all ease-in-out duration-300 dark:group-hover:stroke-dark"
           />
         </button>
       </div>

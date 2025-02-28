@@ -11,7 +11,8 @@ import './utils/magneticElement';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <div className="text-dark bg-light min-h-dvh">
+    <div className="text-dark bg-light min-h-dvh dark:text-light dark:bg-dark">
+      <title>Build Stone</title>
       <Home />
       <AboutUs />
       <SolutionsOverview />
