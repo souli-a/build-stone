@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import Footer from './components/Footer';
 import AboutUs from './pages/AboutUs';
 import BuyingProcess from './pages/BuyingProcess';
 import Contact from './pages/Contact';
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')!).render(
       <SolutionsOverview />
       <BuyingProcess />
       <Contact />
+      <Footer />
     </div>
   </StrictMode>
 );
