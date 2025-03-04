@@ -6,10 +6,10 @@ import aboutUsPageRef from '../utils/aboutUsPageRef.ts';
 
 const AboutUs = () => {
   return (
-    <div className="flex justify-center" ref={aboutUsPageRef}>
-      <article className="w-[var(--width-container)] text-balance">
-        <div className="flex flex-col gap-[var(--spacing-3xl)]">
-          <Heading1 className="mb-[-1rem]">
+    <div className="flex justify-center p-5 pb-10" ref={aboutUsPageRef}>
+      <article className="w-container text-balance">
+        <div className="flex flex-col gap-5 max-md:gap-2">
+          <Heading1>
             <PrimaryColorSpan>Build Stone</PrimaryColorSpan>
           </Heading1>
           <Heading6>Qui sommes-nous ?</Heading6>

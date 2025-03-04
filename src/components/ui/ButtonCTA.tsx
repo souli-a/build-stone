@@ -7,7 +7,7 @@ const ButtonCTA = ({
 }) => {
   return (
     <button
-      className={`cursor-pointer text-title-desktop-6 text-light bg-primary rounded-[var(--border-radius-button)] px-[var(--spacing-2xl)] py-[var(--spacing-3xl)] font-title-desktop ${
+      className={`cursor-pointer font-title-desktop text-title-desktop-6 text-light bg-primary rounded-xl px-10 py-7 max-md:text-title-mobile-6 max-md:font-title-mobile max-md:w-fit max-md:px-7 max-md:py-5 ${
         className || ''
       }`}>
       {children}

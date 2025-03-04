@@ -9,8 +9,8 @@ const SolutionsOverviewCard = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="flex flex-col p-[var(--spacing-3xl)] gap-[var(--spacing-lg)] bg-[var(--color-light-grey)] rounded-[var(--border-radius-button)] border-1 border-grey-border dark:bg-surface-dark-mode dark:border-border-dark-mode *:leading-7">
-      <Heading3 className="!mb-[var(--spacing-2xl)]">
+    <div className="flex flex-col w-fit border-1 gap-1 px-7 py-4 rounded-xl bg-grey-light-mode border-grey-border-light-mode dark:bg-blue-dark-mode dark:border-blue-border-dark-mode max-md:flex-1">
+      <Heading3>
         <PrimaryColorSpan>{title}</PrimaryColorSpan>
       </Heading3>
       {children}

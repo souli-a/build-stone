@@ -32,12 +32,12 @@ const solutions = {
 
 const SolutionsOverview = () => {
   return (
-    <div className="flex justify-center items-center pt-[7.5rem]">
-      <div className="flex flex-col gap-[var(--spacing-3xl)] w-[var(--width-container)]">
+    <div className="flex justify-center p-5 pb-10">
+      <div className="flex flex-col w-container gap-5 max-md:gap-4">
         <Heading1>
           Nos <PrimaryColorSpan>solutions</PrimaryColorSpan>
         </Heading1>
-        <div className="flex flex-wrap gap-[var(--spacing-3xl)]">
+        <div className="flex flex-wrap gap-5 max-md:gap-3">
           <SolutionsOverviewCard title="Mur">
             {Object.values(solutions.mur).map((item, index) => (
               <TextBodyDesktop key={`mur-${index}`}>{item}</TextBodyDesktop>
@@ -54,7 +54,7 @@ const SolutionsOverview = () => {
             ))}
           </SolutionsOverviewCard>
         </div>
-        <div className="flex flex-col gap-[var(--spacing-sm)]">
+        <div className="flex flex-col max-md:hidden">
           <TextBodyDesktop className="opacity-25">
             * Liste non exhaustive
           </TextBodyDesktop>

@@ -7,7 +7,7 @@ const TextBodyDesktop = ({
 }) => {
   return (
     <p
-      className={`text-body-desktop font-body-desktop leading-[var(--line-height-body-desktop)] ${
+      className={`text-body-desktop font-body-desktop max-md:text-body-mobile max-md:font-body-mobile leading-10 max-md:leading-6 ${
         className || ''
       }`}>
       {children}

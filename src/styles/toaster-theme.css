@@ -1,6 +1,6 @@
 [data-sonner-toaster][data-sonner-theme='light'] {
-  --normal-bg: var(--color-light-grey);
-  --normal-border: var(--color-grey-border);
+  --normal-bg: var(--color-grey-light-mode);
+  --normal-border: var(--color-grey-border-light-mode);
   --normal-text: var(--color-dark);
   --normal-bg-hover: none;
   --normal-border-hover: none;
@@ -19,8 +19,8 @@
 }
 
 [data-sonner-toaster][data-sonner-theme='dark'] {
-  --normal-bg: var(--color-surface-dark-mode);
-  --normal-border: var(--color-border-dark-mode);
+  --normal-bg: var(--color-blue-dark-mode);
+  --normal-border: var(--color-blue-border-dark-mode);
   --normal-text: var(--color-light);
   --normal-bg-hover: none;
   --normal-border-hover: none;

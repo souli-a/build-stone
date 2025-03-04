@@ -14,7 +14,7 @@ const ProcessStepContent = ({
   children,
 }: ProcessStepContentProps) => {
   return (
-    <div className="flex flex-col gap-[var(--spacing-xl)] text-balance">
+    <div className="flex flex-col text-balance gap-2 max-md:gap-1">
       <Heading6>{stepNumber}</Heading6>
       <Heading3>{title}</Heading3>
       <TextBodyDesktop>{children}</TextBodyDesktop>
