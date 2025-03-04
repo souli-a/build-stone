@@ -2,7 +2,7 @@ import Heading1 from '../components/ui/Heading1';
 import Heading6 from '../components/ui/Heading6';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
 import TextBodyDesktop from '../components/ui/TextBodyDesktop';
-import aboutUsPageRef from '../utils/aboutUsPageRef.ts';
+import aboutUsPageRef from '../utils/aboutUsPageRef';
 
 const AboutUs = () => {
   return (

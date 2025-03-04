@@ -1,7 +1,7 @@
 import Heading3 from './ui/Heading3';
 import PrimaryColorSpan from './ui/PrimaryColorSpan';
 
-const SolutionsOverviewCard = ({
+const ServiceCard = ({
   title,
   children,
 }: {
@@ -18,4 +18,4 @@ const SolutionsOverviewCard = ({
   );
 };
 
-export default SolutionsOverviewCard;
+export default ServiceCard;

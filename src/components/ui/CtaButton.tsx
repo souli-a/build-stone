@@ -1,4 +1,4 @@
-const ButtonCTA = ({
+const CtaButton = ({
   children,
   className,
 }: {
@@ -15,4 +15,4 @@ const ButtonCTA = ({
   );
 };
 
-export default ButtonCTA;
+export default CtaButton;

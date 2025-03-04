@@ -2,8 +2,8 @@ import { usePrefersColorScheme } from '@anatoliygatt/use-prefers-color-scheme';
 import { CircleCheck, Mail, PhoneForwarded } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import { toast, Toaster } from 'sonner';
-import useWindowWidth from '../hooks/useWindowDimensions';
-import copyButtonValue from '../utils/copyValueToClipboard';
+import useWindowWidth from '../hooks/useWindowWidth';
+import copyToClipboard from '../utils/copyToClipboard';
 import ClipboardButton from './ui/ClipboardButton';
 import TextBodyDesktop from './ui/TextBodyDesktop';
 
@@ -14,7 +14,7 @@ const ContactInfo = ({ className }: { className?: string }) => {
   const iconSize = windowWidth >= 768 ? 20 : 13;
 
   const handleCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
-    copyButtonValue(e);
+    copyToClipboard(e);
     toast('Copié', {
       style: {
         width: 'fit-content',

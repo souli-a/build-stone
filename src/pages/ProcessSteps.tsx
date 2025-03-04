@@ -1,7 +1,7 @@
 import Heading1 from '../components/ui/Heading1';
 import ProcessStepContent from '../components/ui/ProcessStepContent';
 
-const BuyingProcess = () => {
+const ProcessSteps = () => {
   return (
     <div className="flex justify-center p-5 pb-10">
       <div className="flex flex-col w-container gap-10 max-md:gap-5">
@@ -44,4 +44,4 @@ const BuyingProcess = () => {
   );
 };
 
-export default BuyingProcess;
+export default ProcessSteps;

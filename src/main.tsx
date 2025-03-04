@@ -2,10 +2,10 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import Footer from './components/Footer';
 import AboutUs from './pages/AboutUs';
-import BuyingProcess from './pages/BuyingProcess';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
-import SolutionsOverview from './pages/SolutionsOverview';
+import ProcessSteps from './pages/ProcessSteps';
+import ServicesOverview from './pages/ServicesOverview';
 import './styles/index.css';
 import './utils/magneticElement';
 
@@ -15,8 +15,8 @@ createRoot(document.getElementById('root')!).render(
       <title>Build Stone</title>
       <Home />
       <AboutUs />
-      <SolutionsOverview />
-      <BuyingProcess />
+      <ServicesOverview />
+      <ProcessSteps />
       <Contact />
       <Footer />
     </div>

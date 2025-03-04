@@ -7,7 +7,9 @@ const Heading6 = ({
 }) => {
   return (
     <h6
-      className={`text-title-desktop-6 text-balance font-title-desktop max-md:text-title-mobile-6 max-md:font-title-mobile ${className || ''}`}>
+      className={`text-title-desktop-6 text-balance font-title-desktop max-md:text-title-mobile-6 max-md:font-title-mobile ${
+        className || ''
+      }`}>
       {children}
     </h6>
   );

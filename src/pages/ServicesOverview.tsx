@@ -1,9 +1,9 @@
-import SolutionsOverviewCard from '../components/SolutionsOverviewCard';
+import ServiceCard from '../components/ServiceCard';
 import Heading1 from '../components/ui/Heading1';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
 import TextBodyDesktop from '../components/ui/TextBodyDesktop';
 
-const solutions = {
+const offerings = {
   mur: {
     1: 'Peinture seigneurie',
     2: 'Mate/velour/satinée',
@@ -30,7 +30,7 @@ const solutions = {
   },
 };
 
-const SolutionsOverview = () => {
+const ServicesOverview = () => {
   return (
     <div className="flex justify-center p-5 pb-10">
       <div className="flex flex-col w-container gap-5 max-md:gap-4">
@@ -38,21 +38,21 @@ const SolutionsOverview = () => {
           Nos <PrimaryColorSpan>solutions</PrimaryColorSpan>
         </Heading1>
         <div className="flex flex-wrap gap-5 max-md:gap-3">
-          <SolutionsOverviewCard title="Mur">
-            {Object.values(solutions.mur).map((item, index) => (
+          <ServiceCard title="Mur">
+            {Object.values(offerings.mur).map((item, index) => (
               <TextBodyDesktop key={`mur-${index}`}>{item}</TextBodyDesktop>
             ))}
-          </SolutionsOverviewCard>
-          <SolutionsOverviewCard title="Plafond">
-            {Object.values(solutions.plafond).map((item, index) => (
+          </ServiceCard>
+          <ServiceCard title="Plafond">
+            {Object.values(offerings.plafond).map((item, index) => (
               <TextBodyDesktop key={`plafond-${index}`}>{item}</TextBodyDesktop>
             ))}
-          </SolutionsOverviewCard>
-          <SolutionsOverviewCard title="Sol">
-            {Object.values(solutions.sol).map((item, index) => (
+          </ServiceCard>
+          <ServiceCard title="Sol">
+            {Object.values(offerings.sol).map((item, index) => (
               <TextBodyDesktop key={`sol-${index}`}>{item}</TextBodyDesktop>
             ))}
-          </SolutionsOverviewCard>
+          </ServiceCard>
         </div>
         <div className="flex flex-col max-md:hidden">
           <TextBodyDesktop className="opacity-25">
@@ -67,4 +67,4 @@ const SolutionsOverview = () => {
   );
 };
 
-export default SolutionsOverview;
+export default ServicesOverview;

@@ -1,12 +1,12 @@
 import { ArrowDown, Heart } from 'lucide-react';
 import Header from '../components/Header';
-import ButtonCTA from '../components/ui/ButtonCTA';
+import CtaButton from '../components/ui/CtaButton';
 import Heading1 from '../components/ui/Heading1';
 import Heading6 from '../components/ui/Heading6';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
 import TextBodyDesktop from '../components/ui/TextBodyDesktop';
-import useWindowWidth from '../hooks/useWindowDimensions';
-import aboutUsPageRef from '../utils/aboutUsPageRef.ts';
+import useWindowWidth from '../hooks/useWindowWidth';
+import aboutUsPageRef from '../utils/aboutUsPageRef';
 import smoothScrollTo from '../utils/smoothScrollTo';
 
 const Home = () => {
@@ -44,9 +44,9 @@ const Home = () => {
           <TextBodyDesktop className="text-balance text-center">
             {shortCompanyDescription}
           </TextBodyDesktop>
-          <ButtonCTA className="magnetic-element uppercase">
+          <CtaButton className="magnetic-element uppercase">
             {buttonCtaText}
-          </ButtonCTA>
+          </CtaButton>
         </section>
         <div>
           <button
