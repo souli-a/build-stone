@@ -8,17 +8,20 @@ import ProcessSteps from './pages/ProcessSteps';
 import ServicesOverview from './pages/ServicesOverview';
 import './styles/index.css';
 import './utils/magneticElement';
+import { ReactLenis } from 'lenis/react';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <div className="text-dark bg-light min-h-dvh dark:text-light dark:bg-dark">
-      <title>Build Stone</title>
-      <Home />
-      <AboutUs />
-      <ServicesOverview />
-      <ProcessSteps />
-      <Contact />
-      <Footer />
-    </div>
+    <ReactLenis root>
+      <div className="text-dark bg-light min-h-dvh dark:text-light dark:bg-dark">
+        <title>Build Stone</title>
+        <Home />
+        <AboutUs />
+        <ServicesOverview />
+        <ProcessSteps />
+        <Contact />
+        <Footer />
+      </div>
+    </ReactLenis>
   </StrictMode>
 );
