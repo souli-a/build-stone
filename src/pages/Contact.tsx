@@ -1,5 +1,5 @@
+import CascadeRevealElement from '../components/CascadeRevealElement';
 import ContactInfo from '../components/ContactInfo';
-import ScrollRevealText from '../components/ScrollRevealText';
 import Heading1 from '../components/ui/Heading1';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
 import TextBodyDesktop from '../components/ui/TextBodyDesktop';
@@ -7,7 +7,7 @@ import TextBodyDesktop from '../components/ui/TextBodyDesktop';
 const Contact = () => {
   return (
     <div className="flex items-center justify-center p-5 pb-10">
-      <ScrollRevealText className="flex flex-col gap-15 w-container max-md:gap-5">
+      <CascadeRevealElement className="flex flex-col gap-15 w-container max-md:gap-5">
         <div className="flex flex-col gap-5">
           <Heading1>
             Ils nous font <PrimaryColorSpan>confiance</PrimaryColorSpan>
@@ -29,7 +29,7 @@ const Contact = () => {
             Nous répondons à toutes vos questions, tous les jours de 9h à 19h.
           </TextBodyDesktop>
         </div>
-      </ScrollRevealText>
+      </CascadeRevealElement>
     </div>
   );
 };

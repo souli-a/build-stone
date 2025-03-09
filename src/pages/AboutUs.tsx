@@ -1,4 +1,4 @@
-import ScrollRevealText from '../components/ScrollRevealText';
+import CascadeRevealElement from '../components/CascadeRevealElement';
 import Heading1 from '../components/ui/Heading1';
 import Heading6 from '../components/ui/Heading6';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
@@ -11,7 +11,7 @@ const AboutUs = () => {
       className="flex justify-center p-5 pb-10 max-md:pb-5"
       ref={aboutUsPageRef}>
       <article className="w-container text-balance">
-        <ScrollRevealText className="flex flex-col gap-5 max-md:gap-2">
+        <CascadeRevealElement className="flex flex-col gap-5 max-md:gap-2">
           <Heading1>
             <PrimaryColorSpan>Build Stone</PrimaryColorSpan>
           </Heading1>
@@ -61,7 +61,7 @@ const AboutUs = () => {
             dans la rénovation d'intérieur{' '}
             <PrimaryColorSpan>depuis plus de 20 ans</PrimaryColorSpan>.
           </TextBodyDesktop>
-        </ScrollRevealText>
+        </CascadeRevealElement>
       </article>
     </div>
   );

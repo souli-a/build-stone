@@ -1,13 +1,15 @@
-import ScrollRevealText from '../components/ScrollRevealText';
+import CascadeRevealElement from '../components/CascadeRevealElement';
 import Heading1 from '../components/ui/Heading1';
 import ProcessStepContent from '../components/ui/ProcessStepContent';
 
 const ProcessSteps = () => {
   return (
     <div className="flex justify-center p-5 pb-10 max-md:pb-5">
-      <ScrollRevealText className="flex flex-col w-container gap-10 max-md:gap-5">
+      <CascadeRevealElement className="flex flex-col w-container gap-10 max-md:gap-5">
         <Heading1>Notre processus</Heading1>
-        <div className="flex flex-col gap-10 max-md:gap-5">
+        <CascadeRevealElement
+          staggerDelay={250}
+          className="flex flex-col gap-10 max-md:gap-5">
           <ProcessStepContent stepNumber={'01.'} title="Contact">
             Lors de notre premier échange (téléphone, WhatsApp ou email),
             partagez-nous vos idées. Nous conviendrons ensuite d'un rendez-vous,
@@ -39,8 +41,8 @@ const ProcessSteps = () => {
               </>
             }
           />
-        </div>
-      </ScrollRevealText>
+        </CascadeRevealElement>
+      </CascadeRevealElement>
     </div>
   );
 };

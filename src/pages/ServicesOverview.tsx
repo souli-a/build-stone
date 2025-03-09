@@ -1,4 +1,4 @@
-import ScrollRevealText from '../components/ScrollRevealText';
+import CascadeRevealElement from '../components/CascadeRevealElement';
 import ServiceCard from '../components/ServiceCard';
 import Heading1 from '../components/ui/Heading1';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
@@ -34,11 +34,14 @@ const offerings = {
 const ServicesOverview = () => {
   return (
     <div className="flex justify-center p-5 pb-10 max-md:pb-5">
-      <ScrollRevealText className="flex flex-col w-container gap-5 max-md:gap-4">
+      <CascadeRevealElement className="flex flex-col w-container gap-5 max-md:gap-4">
         <Heading1>
           Nos <PrimaryColorSpan>solutions</PrimaryColorSpan>
         </Heading1>
-        <div className="flex flex-wrap gap-5 max-md:gap-3">
+        <CascadeRevealElement
+          staggerDelay={250}
+          config={{ mass: 4 }}
+          className="flex flex-wrap gap-5 max-md:gap-3">
           <ServiceCard title="Mur">
             {Object.values(offerings.mur).map((item, index) => (
               <TextBodyDesktop key={`mur-${index}`}>{item}</TextBodyDesktop>
@@ -54,7 +57,7 @@ const ServicesOverview = () => {
               <TextBodyDesktop key={`sol-${index}`}>{item}</TextBodyDesktop>
             ))}
           </ServiceCard>
-        </div>
+        </CascadeRevealElement>
         <div className="flex flex-col max-md:hidden">
           <TextBodyDesktop className="opacity-25">
             * Liste non exhaustive
@@ -63,7 +66,7 @@ const ServicesOverview = () => {
             * N'hésitez pas à nous contacter pour plus d'informations
           </TextBodyDesktop>
         </div>
-      </ScrollRevealText>
+      </CascadeRevealElement>
     </div>
   );
 };
