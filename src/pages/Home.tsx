@@ -50,6 +50,7 @@ const Home = () => {
         </section>
         <div>
           <button
+            name="Aller à la section À propos"
             className="cursor-pointer p-2 group animate-bouncing transition-all ease-in-out duration-300 hover:[animation-play-state:paused] hover:bg-dark rounded-full dark:hover:bg-light"
             onClick={() =>
               smoothScrollTo(aboutUsPageRef as React.RefObject<HTMLElement>)
