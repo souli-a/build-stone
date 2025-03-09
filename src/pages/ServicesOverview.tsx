@@ -41,7 +41,7 @@ const ServicesOverview = () => {
         <CascadeRevealElement
           staggerDelay={250}
           config={{ mass: 4 }}
-          className="flex flex-wrap gap-5 max-md:gap-3">
+          className="flex flex-wrap gap-5 max-md:gap-3 max-md:*:flex max-md:*:flex-1">
           <ServiceCard title="Mur">
             {Object.values(offerings.mur).map((item, index) => (
               <TextBodyDesktop key={`mur-${index}`}>{item}</TextBodyDesktop>
