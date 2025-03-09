@@ -21,9 +21,9 @@
   --text-body-desktop: 1.125rem;
 
   /* Mobile font sizes. */
-  --text-title-mobile-1: 1.75rem;
-  --text-title-mobile-3: 1.375rem;
-  --text-title-mobile-6: 0.938rem;
+  --text-title-mobile-1: 1.925rem;
+  --text-title-mobile-3: 1.425rem;
+  --text-title-mobile-6: 0.975rem;
   --text-body-mobile: 0.875rem;
 
   /* Font weights for mobile and desktop. */
