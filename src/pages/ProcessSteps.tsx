@@ -3,7 +3,7 @@ import ProcessStepContent from '../components/ui/ProcessStepContent';
 
 const ProcessSteps = () => {
   return (
-    <div className="flex justify-center p-5 pb-10">
+    <div className="flex justify-center p-5 pb-10 max-md:pb-5">
       <div className="flex flex-col w-container gap-10 max-md:gap-5">
         <Heading1>Notre processus</Heading1>
         <div className="flex flex-col gap-10 max-md:gap-5">

@@ -6,7 +6,7 @@ import TextBodyDesktop from '../components/ui/TextBodyDesktop';
 const Contact = () => {
   return (
     <div className="flex items-center justify-center p-5 pb-10">
-      <div className="flex flex-col gap-15 w-container">
+      <div className="flex flex-col gap-15 w-container max-md:gap-5">
         <div className="flex flex-col gap-5">
           <Heading1>
             Ils nous font <PrimaryColorSpan>confiance</PrimaryColorSpan>

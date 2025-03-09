@@ -6,7 +6,9 @@ import aboutUsPageRef from '../utils/aboutUsPageRef';
 
 const AboutUs = () => {
   return (
-    <div className="flex justify-center p-5 pb-10" ref={aboutUsPageRef}>
+    <div
+      className="flex justify-center p-5 pb-10 max-md:pb-5"
+      ref={aboutUsPageRef}>
       <article className="w-container text-balance">
         <div className="flex flex-col gap-5 max-md:gap-2">
           <Heading1>

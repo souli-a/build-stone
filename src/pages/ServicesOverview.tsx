@@ -32,7 +32,7 @@ const offerings = {
 
 const ServicesOverview = () => {
   return (
-    <div className="flex justify-center p-5 pb-10">
+    <div className="flex justify-center p-5 pb-10 max-md:pb-5">
       <div className="flex flex-col w-container gap-5 max-md:gap-4">
         <Heading1>
           Nos <PrimaryColorSpan>solutions</PrimaryColorSpan>
