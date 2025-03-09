@@ -2,6 +2,7 @@ import { usePrefersColorScheme } from '@anatoliygatt/use-prefers-color-scheme';
 import { CircleCheck, Mail, PhoneForwarded } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import { toast, Toaster } from 'sonner';
+import { EMAIL, PHONE_NUMBER } from '../constants/contact';
 import useWindowWidth from '../hooks/useWindowWidth';
 import copyToClipboard from '../utils/copyToClipboard';
 import ClipboardButton from './ui/ClipboardButton';
@@ -35,22 +36,22 @@ const ContactInfo = ({ className }: { className?: string }) => {
       className={`not-italic flex flex-wrap gap-5 max-md:gap-2 ${
         className || ''
       }`}>
-      <ClipboardButton handleCopy={handleCopy} value="example@example.com">
+      <ClipboardButton handleCopy={handleCopy} value={EMAIL}>
         <Mail
           className="mt-[0.1rem]"
           color="var(--color-primary)"
           size={iconSize}
           strokeWidth={3}
         />
-        <TextBodyDesktop>example@example.com</TextBodyDesktop>
+        <TextBodyDesktop>{EMAIL}</TextBodyDesktop>
       </ClipboardButton>
-      <ClipboardButton handleCopy={handleCopy} value="+33612345678">
+      <ClipboardButton handleCopy={handleCopy} value={PHONE_NUMBER}>
         <PhoneForwarded
           color="var(--color-primary)"
           size={iconSize}
           strokeWidth={3}
         />
-        <TextBodyDesktop>+33612345678</TextBodyDesktop>
+        <TextBodyDesktop>{PHONE_NUMBER}</TextBodyDesktop>
       </ClipboardButton>
       {createPortal(
         <Toaster
