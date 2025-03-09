@@ -1,3 +1,4 @@
+import ScrollRevealText from '../components/ScrollRevealText';
 import ServiceCard from '../components/ServiceCard';
 import Heading1 from '../components/ui/Heading1';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
@@ -33,7 +34,7 @@ const offerings = {
 const ServicesOverview = () => {
   return (
     <div className="flex justify-center p-5 pb-10 max-md:pb-5">
-      <div className="flex flex-col w-container gap-5 max-md:gap-4">
+      <ScrollRevealText className="flex flex-col w-container gap-5 max-md:gap-4">
         <Heading1>
           Nos <PrimaryColorSpan>solutions</PrimaryColorSpan>
         </Heading1>
@@ -62,7 +63,7 @@ const ServicesOverview = () => {
             * N'hésitez pas à nous contacter pour plus d'informations
           </TextBodyDesktop>
         </div>
-      </div>
+      </ScrollRevealText>
     </div>
   );
 };

@@ -1,10 +1,11 @@
+import ScrollRevealText from '../components/ScrollRevealText';
 import Heading1 from '../components/ui/Heading1';
 import ProcessStepContent from '../components/ui/ProcessStepContent';
 
 const ProcessSteps = () => {
   return (
     <div className="flex justify-center p-5 pb-10 max-md:pb-5">
-      <div className="flex flex-col w-container gap-10 max-md:gap-5">
+      <ScrollRevealText className="flex flex-col w-container gap-10 max-md:gap-5">
         <Heading1>Notre processus</Heading1>
         <div className="flex flex-col gap-10 max-md:gap-5">
           <ProcessStepContent stepNumber={'01.'} title="Contact">
@@ -39,7 +40,7 @@ const ProcessSteps = () => {
             }
           />
         </div>
-      </div>
+      </ScrollRevealText>
     </div>
   );
 };

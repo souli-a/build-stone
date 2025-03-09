@@ -21,5 +21,5 @@
     "noFallthroughCasesInSwitch": true
     // "noUncheckedSideEffectImports": true // Not supported for now.
   },
-  "include": ["src", "vite-env.d.ts"]
+  "include": ["src", "vite-env.d.ts", "react-spring.d.ts"]
 }
