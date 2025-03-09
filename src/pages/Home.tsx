@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-dvh p-5 pb-0">
       <Header />
-      <div className="flex justify-center items-center flex-col flex-1 gap-10">
+      <div className="flex justify-center items-center flex-col flex-1 gap-50 max-md:gap-25">
         <section className="flex flex-col max-w-200 gap-6 items-center max-md:gap-3">
           <div className="flex gap-2 items-center justify-center flex-wrap">
             <Heart
