@@ -1,4 +1,5 @@
 import { ArrowDown, Heart } from 'lucide-react';
+import CascadeRevealElement from '../components/CascadeRevealElement';
 import Header from '../components/Header';
 import CtaButton from '../components/ui/CtaButton';
 import Heading1 from '../components/ui/Heading1';
@@ -26,7 +27,7 @@ const Home = () => {
     <div className="flex flex-col min-h-dvh p-5 pb-0">
       <Header />
       <div className="flex justify-center items-center flex-col flex-1 gap-50 max-md:gap-25">
-        <section className="flex flex-col max-w-200 gap-6 items-center max-md:gap-3">
+        <CascadeRevealElement className="flex flex-col max-w-200 gap-6 items-center max-md:gap-3">
           <div className="flex gap-2 items-center justify-center flex-wrap">
             <Heart
               className="mb-[0.1rem]"
@@ -47,8 +48,8 @@ const Home = () => {
           <CtaButton className="magnetic-element uppercase">
             {buttonCtaText}
           </CtaButton>
-        </section>
-        <div>
+        </CascadeRevealElement>
+        <CascadeRevealElement>
           <button
             name="Aller à la section À propos"
             className="cursor-pointer p-2 group animate-bouncing transition-all ease-in-out duration-300 hover:[animation-play-state:paused] hover:bg-dark rounded-full dark:hover:bg-light"
@@ -61,7 +62,7 @@ const Home = () => {
               className="group-hover:stroke-light transition-all ease-in-out duration-300 dark:group-hover:stroke-dark"
             />
           </button>
-        </div>
+        </CascadeRevealElement>
       </div>
     </div>
   );
