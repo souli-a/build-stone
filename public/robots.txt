@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://build-stone-1.vercel.app/sitemap.xml
