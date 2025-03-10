@@ -50,7 +50,7 @@ const CascadeItem = ({
 
 const CascadeRevealElement = ({
   children,
-  threshold = 0.5,
+  threshold = 0.4,
   baseDelay = 125,
   staggerDelay = 50,
   config = { mass: 3, tension: 250, friction: 50 },

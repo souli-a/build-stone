@@ -5,9 +5,12 @@ import ProcessStepContent from '../components/ui/ProcessStepContent';
 const ProcessSteps = () => {
   return (
     <div className="flex justify-center p-5 pb-10 max-md:pb-5">
-      <CascadeRevealElement className="flex flex-col w-container gap-10 max-md:gap-5">
+      <CascadeRevealElement
+        threshold={0.2}
+        className="flex flex-col w-container gap-10 max-md:gap-5">
         <Heading1>Notre processus</Heading1>
         <CascadeRevealElement
+          threshold={0.3}
           staggerDelay={250}
           className="flex flex-col gap-10 max-md:gap-5">
           <ProcessStepContent stepNumber={'01.'} title="Contact">
