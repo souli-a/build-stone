@@ -51,7 +51,7 @@ const Home = () => {
         </CascadeRevealElement>
         <CascadeRevealElement>
           <button
-            name="Aller à la section À propos"
+            aria-label="Aller à la section à propos"
             className="cursor-pointer p-2 group animate-bouncing transition-all ease-in-out duration-300 hover:[animation-play-state:paused] hover:bg-dark rounded-full dark:hover:bg-light"
             onClick={() =>
               smoothScrollTo(aboutUsPageRef as React.RefObject<HTMLElement>)
