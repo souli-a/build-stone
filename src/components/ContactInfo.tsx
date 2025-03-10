@@ -37,12 +37,7 @@ const ContactInfo = ({ className }: { className?: string }) => {
         className || ''
       }`}>
       <ClipboardButton handleCopy={handleCopy} value={EMAIL}>
-        <Mail
-          className="mt-[0.1rem]"
-          color="var(--color-primary)"
-          size={iconSize}
-          strokeWidth={3}
-        />
+        <Mail color="var(--color-primary)" size={iconSize} strokeWidth={3} />
         <TextBodyDesktop>{EMAIL}</TextBodyDesktop>
       </ClipboardButton>
       <ClipboardButton handleCopy={handleCopy} value={PHONE_NUMBER}>
