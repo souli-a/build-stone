@@ -12,7 +12,7 @@ const Contact = () => {
           <Heading1>
             Ils nous font <PrimaryColorSpan>confiance</PrimaryColorSpan>
           </Heading1>
-          <div className="flex items-center flex-wrap gap-5 *:max-w-50 max-md:*:max-w-25">
+          <div className="flex items-center flex-wrap gap-5 max-md:*:max-w-25">
             <img src="images/cb21-logo.png" alt="Tour CB21 logo" />
             <img src="images/engie-logo.png" alt="Engie logo" />
             <img src="images/tour-eiffel-logo.png" alt="Tour Eiffel logo" />
