@@ -9,7 +9,7 @@ const Header = () => {
         title="Build Stone page d'accueil">
         <img
           className="max-w-30 max-md:max-w-25"
-          src="./images/build-stone-logo.svg"
+          src="./images/build-stone-logo.avif"
           alt="Build Stone Logo"
         />
       </a>

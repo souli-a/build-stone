@@ -13,11 +13,14 @@ const Contact = () => {
             Ils nous font <PrimaryColorSpan>confiance</PrimaryColorSpan>
           </Heading1>
           <div className="flex items-center flex-wrap gap-5 max-md:*:max-w-25">
-            <img src="images/cb21-logo.png" alt="Tour CB21 logo" />
-            <img src="images/engie-logo.png" alt="Engie logo" />
-            <img src="images/tour-eiffel-logo.png" alt="Tour Eiffel logo" />
-            <img src="images/ratp-logo.png" alt="RATP logo" />
-            <img src="images/paris-diderot-logo.png" alt="Paris Diderot logo" />
+            <img src="images/cb-21-logo.avif" alt="Tour CB21 logo" />
+            <img src="images/engie-logo.avif" alt="Engie logo" />
+            <img src="images/tour-eiffel-logo.avif" alt="Tour Eiffel logo" />
+            <img src="images/ratp-logo.avif" alt="RATP logo" />
+            <img
+              src="images/paris-diderot-logo.avif"
+              alt="Paris Diderot logo"
+            />
           </div>
         </div>
         <div className="flex flex-col gap-2">
