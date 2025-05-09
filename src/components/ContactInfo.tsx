@@ -49,13 +49,29 @@ const ContactInfo = ({ className }: { className?: string }) => {
         <TextBodyDesktop>{PHONE_NUMBER}</TextBodyDesktop>
       </ClipboardButton>
       {createPortal(
-        <Toaster
-          visibleToasts={3}
-          duration={1500}
-          theme={isThemeDark ? 'dark' : 'light'}
-          position="bottom-right"
-          offset={'3rem'}
-        />,
+        <>
+          <style>
+            {`
+              [data-sonner-toaster][data-sonner-theme='light'] {
+                --normal-bg: var(--color-grey-light-mode);
+                --normal-border: var(--color-grey-border-light-mode);
+                --normal-text: var(--color-dark);
+              }
+              [data-sonner-toaster][data-sonner-theme='dark'] {
+                --normal-bg: var(--color-blue-dark-mode);
+                --normal-border: var(--color-blue-border-dark-mode);
+                --normal-text: var(--color-light);
+              }
+            `}
+          </style>
+          <Toaster
+            visibleToasts={3}
+            duration={1500}
+            theme={isThemeDark ? 'dark' : 'light'}
+            position="bottom-right"
+            offset={'3rem'}
+          />
+        </>,
         document.body
       )}
     </address>
