@@ -5,7 +5,7 @@ import CtaButton from '../components/ui/CtaButton';
 import Heading1 from '../components/ui/Heading1';
 import Heading6 from '../components/ui/Heading6';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
-import TextBodyDesktop from '../components/ui/TextBodyDesktop';
+import TextBody from '../components/ui/TextBody';
 import useWindowWidth from '../hooks/useWindowWidth';
 import aboutUsPageRef from '../utils/aboutUsPageRef';
 import smoothScrollTo from '../utils/smoothScrollTo';
@@ -42,9 +42,9 @@ const Home = () => {
             de <PrimaryColorSpan>qualité</PrimaryColorSpan> pour des résultats{' '}
             <PrimaryColorSpan>durables</PrimaryColorSpan>
           </Heading1>
-          <TextBodyDesktop className="text-balance text-center">
+          <TextBody className="text-balance text-center">
             {shortCompanyDescription}
-          </TextBodyDesktop>
+          </TextBody>
           <CtaButton className="magnetic-element uppercase">
             {buttonCtaText}
           </CtaButton>

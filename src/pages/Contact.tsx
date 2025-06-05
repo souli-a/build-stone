@@ -2,7 +2,7 @@ import CascadeRevealElement from '../components/CascadeRevealElement';
 import ContactInfo from '../components/ContactInfo';
 import Heading1 from '../components/ui/Heading1';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
-import TextBodyDesktop from '../components/ui/TextBodyDesktop';
+import TextBody from '../components/ui/TextBody';
 
 const Contact = () => {
   return (
@@ -28,9 +28,9 @@ const Contact = () => {
             Vous avez un <PrimaryColorSpan>projet</PrimaryColorSpan> ?
           </Heading1>
           <ContactInfo />
-          <TextBodyDesktop>
+          <TextBody>
             Nous répondons à toutes vos questions, tous les jours de 9h à 19h.
-          </TextBodyDesktop>
+          </TextBody>
         </div>
       </CascadeRevealElement>
     </div>

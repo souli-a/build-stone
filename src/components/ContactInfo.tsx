@@ -6,7 +6,7 @@ import { EMAIL, PHONE_NUMBER } from '../constants/contact';
 import useWindowWidth from '../hooks/useWindowWidth';
 import copyToClipboard from '../utils/copyToClipboard';
 import ClipboardButton from './ui/ClipboardButton';
-import TextBodyDesktop from './ui/TextBodyDesktop';
+import TextBody from './ui/TextBody';
 
 const ContactInfo = ({ className }: { className?: string }) => {
   const preferredColorScheme = usePrefersColorScheme();
@@ -38,7 +38,7 @@ const ContactInfo = ({ className }: { className?: string }) => {
       }`}>
       <ClipboardButton handleCopy={handleCopy} value={EMAIL}>
         <Mail color="var(--color-primary)" size={iconSize} strokeWidth={3} />
-        <TextBodyDesktop>{EMAIL}</TextBodyDesktop>
+        <TextBody>{EMAIL}</TextBody>
       </ClipboardButton>
       <ClipboardButton handleCopy={handleCopy} value={PHONE_NUMBER}>
         <PhoneForwarded
@@ -46,7 +46,7 @@ const ContactInfo = ({ className }: { className?: string }) => {
           size={iconSize}
           strokeWidth={3}
         />
-        <TextBodyDesktop>{PHONE_NUMBER}</TextBodyDesktop>
+        <TextBody>{PHONE_NUMBER}</TextBody>
       </ClipboardButton>
       {createPortal(
         <>

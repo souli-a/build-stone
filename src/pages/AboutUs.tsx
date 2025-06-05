@@ -2,7 +2,7 @@ import CascadeRevealElement from '../components/CascadeRevealElement';
 import Heading1 from '../components/ui/Heading1';
 import Heading6 from '../components/ui/Heading6';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
-import TextBodyDesktop from '../components/ui/TextBodyDesktop';
+import TextBody from '../components/ui/TextBody';
 import aboutUsPageRef from '../utils/aboutUsPageRef';
 
 const AboutUs = () => {
@@ -16,7 +16,7 @@ const AboutUs = () => {
             <PrimaryColorSpan>Build Stone</PrimaryColorSpan>
           </Heading1>
           <Heading6>Qui sommes-nous ?</Heading6>
-          <TextBodyDesktop>
+          <TextBody>
             Qu'il s'agisse de rénover entièrement une pièce, de réaliser une
             pose ou une dépose de sol, ou de tout autres rénovations extérieurs,
             <PrimaryColorSpan>
@@ -24,21 +24,21 @@ const AboutUs = () => {
               nous avons le savoir-faire
             </PrimaryColorSpan>{' '}
             pour prendre en charge votre chantier.
-          </TextBodyDesktop>
-          <TextBodyDesktop>
+          </TextBody>
+          <TextBody>
             Chez <PrimaryColorSpan>Build Stone</PrimaryColorSpan>, nous croyons
             en des résultats qui non seulement{' '}
             <PrimaryColorSpan>répondent à vos attentes</PrimaryColorSpan>, mais
             les dépassent.
-          </TextBodyDesktop>
-          <TextBodyDesktop>
+          </TextBody>
+          <TextBody>
             Il nous tient à cœur de fournir la plus haute{' '}
             <PrimaryColorSpan>qualité de service</PrimaryColorSpan>. C'est ce
             qui a permis de satisfaire plus de{' '}
             <PrimaryColorSpan>150 clients</PrimaryColorSpan> à travers la
             France.
-          </TextBodyDesktop>
-          <TextBodyDesktop>
+          </TextBody>
+          <TextBody>
             <PrimaryColorSpan>
               Nous respectons scrupuleusement les délais
             </PrimaryColorSpan>
@@ -47,20 +47,20 @@ const AboutUs = () => {
             garantissant d'excellentes finitions et{' '}
             <PrimaryColorSpan>des résultats durables</PrimaryColorSpan>, grâce à
             des matériaux soigneusement sélectionnés.
-          </TextBodyDesktop>
-          <TextBodyDesktop>
+          </TextBody>
+          <TextBody>
             De la discussion à la réalisation, notre équipe qualifiée assure une
             gestion de projet avec un{' '}
             <PrimaryColorSpan>suivi rigoureux et transparent</PrimaryColorSpan>{' '}
             et transparent à chaque étape.
-          </TextBodyDesktop>
-          <TextBodyDesktop>
+          </TextBody>
+          <TextBody>
             <PrimaryColorSpan>Nous offrons nos solutions</PrimaryColorSpan> dans
             toutes les régions de France, portées
             <PrimaryColorSpan> par une équipe expérimentée </PrimaryColorSpan>
             dans la rénovation d'intérieur{' '}
             <PrimaryColorSpan>depuis plus de 20 ans</PrimaryColorSpan>.
-          </TextBodyDesktop>
+          </TextBody>
         </CascadeRevealElement>
       </article>
     </div>

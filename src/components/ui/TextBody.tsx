@@ -1,4 +1,4 @@
-const TextBodyDesktop = ({
+const TextBody = ({
   children,
   className,
 }: {
@@ -15,4 +15,4 @@ const TextBodyDesktop = ({
   );
 };
 
-export default TextBodyDesktop;
+export default TextBody;

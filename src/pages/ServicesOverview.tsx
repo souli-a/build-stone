@@ -2,7 +2,7 @@ import CascadeRevealElement from '../components/CascadeRevealElement';
 import ServiceCard from '../components/ServiceCard';
 import Heading1 from '../components/ui/Heading1';
 import PrimaryColorSpan from '../components/ui/PrimaryColorSpan';
-import TextBodyDesktop from '../components/ui/TextBodyDesktop';
+import TextBody from '../components/ui/TextBody';
 
 const offerings = {
   mur: {
@@ -44,27 +44,27 @@ const ServicesOverview = () => {
           className="flex flex-wrap gap-5 max-md:gap-3 max-md:*:flex max-md:*:flex-1">
           <ServiceCard title="Mur">
             {Object.values(offerings.mur).map((item, index) => (
-              <TextBodyDesktop key={`mur-${index}`}>{item}</TextBodyDesktop>
+              <TextBody key={`mur-${index}`}>{item}</TextBody>
             ))}
           </ServiceCard>
           <ServiceCard title="Plafond">
             {Object.values(offerings.plafond).map((item, index) => (
-              <TextBodyDesktop key={`plafond-${index}`}>{item}</TextBodyDesktop>
+              <TextBody key={`plafond-${index}`}>{item}</TextBody>
             ))}
           </ServiceCard>
           <ServiceCard title="Sol">
             {Object.values(offerings.sol).map((item, index) => (
-              <TextBodyDesktop key={`sol-${index}`}>{item}</TextBodyDesktop>
+              <TextBody key={`sol-${index}`}>{item}</TextBody>
             ))}
           </ServiceCard>
         </CascadeRevealElement>
         <div className="flex flex-col max-md:hidden">
-          <TextBodyDesktop className="opacity-25">
+          <TextBody className="opacity-25">
             * Liste non exhaustive
-          </TextBodyDesktop>
-          <TextBodyDesktop className="opacity-25">
+          </TextBody>
+          <TextBody className="opacity-25">
             * N'hésitez pas à nous contacter pour plus d'informations
-          </TextBodyDesktop>
+          </TextBody>
         </div>
       </CascadeRevealElement>
     </div>
