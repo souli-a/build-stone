@@ -53,7 +53,7 @@ const CtaButton = ({
           </div>
           <div className="flex flex-col items-center max-md:gap-1">
             <TextBody className="text-center text-balance">
-              Copiez plutôt notre mail / numéro de téléphone :
+              Cliquez pour copier notre mail / numéro :
             </TextBody>
             <ContactInfo className="justify-center items-center max-lg:flex-col max-lg:gap-0 max-md:gap-0 max-sm:gap-0" />
           </div>

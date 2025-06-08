@@ -14,10 +14,6 @@ const Home = () => {
   const windowWidth = useWindowWidth();
   const heartIconSize = windowWidth >= 768 ? 20 : 15;
   const arrowIconSize = windowWidth >= 768 ? 70 : 45;
-  const buttonCtaText =
-    windowWidth >= 768
-      ? 'OBTENEZ UN DEVIS GRATUIT — DÈS MAINTENANT'
-      : 'OBTENEZ UN DEVIS GRATUIT';
   const shortCompanyDescription =
     windowWidth >= 768
       ? "Une équipe expérimentée — Tous corps d'état  — Depuis 2001"
@@ -46,7 +42,7 @@ const Home = () => {
             {shortCompanyDescription}
           </TextBody>
           <CtaButton className="magnetic-element uppercase">
-            {buttonCtaText}
+            Contactez-nous
           </CtaButton>
         </CascadeRevealElement>
         <CascadeRevealElement>
