@@ -59,9 +59,7 @@ const ServicesOverview = () => {
           </ServiceCard>
         </CascadeRevealElement>
         <div className="flex flex-col max-md:hidden">
-          <TextBody className="opacity-25">
-            * Liste non exhaustive
-          </TextBody>
+          <TextBody className="opacity-25">* Liste non exhaustive</TextBody>
           <TextBody className="opacity-25">
             * N'hésitez pas à nous contacter pour plus d'informations
           </TextBody>

@@ -1,5 +1,5 @@
 import { animated, useInView, useSpring } from '@react-spring/web';
-import { Children, ReactNode, useMemo } from 'react';
+import { Children, useMemo, type ReactNode } from 'react';
 
 interface CascadeRevealProps {
   children: ReactNode;

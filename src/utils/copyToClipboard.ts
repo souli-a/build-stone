@@ -1,5 +1,8 @@
 const copyToClipboard = (event: React.MouseEvent<HTMLButtonElement>) => {
-  navigator.clipboard.writeText(event.currentTarget.textContent || '');
+  const textToCopy = event.currentTarget.textContent;
+  if (textToCopy) {
+    navigator.clipboard.writeText(textToCopy);
+  }
 };
 
 export default copyToClipboard;

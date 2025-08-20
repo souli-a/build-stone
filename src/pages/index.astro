@@ -1,9 +1,16 @@
-<!DOCTYPE html>
+---
+import LenisWrapper from '../components/LenisWrapper.tsx';
+import Footer from '../components/Footer.tsx';
+import AboutUs from '../sections/AboutUs.tsx';
+import Contact from '../sections/Contact.tsx';
+import Home from '../sections/Home.tsx';
+import ProcessSteps from '../sections/ProcessSteps.tsx';
+import ServicesOverview from '../sections/ServicesOverview.tsx';
+import '../styles/index.css';
+---
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <!-- Force a cache bust with a query parameter (for Firefox). -->
-    <link
+		<link
       rel="icon"
       type="image/avif"
       href="/images/build-stone-logo.avif?v=2" />
@@ -31,9 +38,17 @@
       content="Build Stone est une entreprise de rénovation d'intérieur, basée à Paris 📍" />
     <title>Build Stone</title>
     <meta name="locale" content="fr" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+	</head>
+	<body>
+  <LenisWrapper client:only="react">
+    <div class="text-dark bg-light min-h-dvh dark:text-light dark:bg-dark">
+      <Home client:load />
+      <AboutUs client:visible />
+      <ServicesOverview client:visible />
+      <ProcessSteps client:visible />
+      <Contact client:visible />
+      <Footer />
+    </div>
+  </LenisWrapper>
+	</body>
 </html>

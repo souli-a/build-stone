@@ -1,5 +1,5 @@
 import { Info } from 'lucide-react';
-import { useState } from 'react';
+import { useState, type Ref } from 'react';
 import { EMAIL } from '../../constants/contact';
 import ContactInfo from '../ContactInfo';
 import TextBody from './TextBody';
@@ -14,13 +14,13 @@ Pourriez-vous m'indiquer vos disponibilités pour en discuter ?
 Cordialement,
 [Votre nom / entreprise / coordonnées]`;
 
-const CtaButton = ({
-  children,
-  className,
-}: {
+type CtaButtonProps = {
   children: string;
   className?: string;
-}) => {
+  ref?: Ref<HTMLButtonElement>;
+};
+
+const CtaButton = ({ children, className, ref }: CtaButtonProps) => {
   const [showFallback, setShowFallback] = useState(false);
 
   const handleEmailRedirection = () => {
@@ -36,6 +36,7 @@ const CtaButton = ({
   return (
     <div className="flex flex-col gap-8 items-center">
       <button
+        ref={ref}
         aria-label="Demander un devis"
         onClick={handleEmailRedirection}
         className={`cursor-pointer font-title-desktop text-title-desktop-6 text-light bg-primary rounded-xl px-10 py-7 max-md:text-title-mobile-6 max-md:font-title-mobile max-md:w-fit max-md:px-7 max-md:py-5 ${
