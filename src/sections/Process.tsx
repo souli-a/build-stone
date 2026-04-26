@@ -63,7 +63,7 @@ const DOTS: readonly DotPos[] = [
 ];
 
 const TEXT_POS: readonly TextPos[] = [
-  { top: "5%", left: "-12%", width: "47%" },
+  { top: "5%", left: "-12%", width: "40%" },
   { top: "17%", right: "-14.5%", width: "45%" },
   { top: "38%", left: "-12%", width: "48%" },
   { top: "59%", right: "-14.5%", width: "44%" },
