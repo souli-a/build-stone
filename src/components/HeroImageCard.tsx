@@ -10,7 +10,7 @@ const HeroImageCard = ({ isRevealed }: HeroImageCardProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: isRevealed ? 1 : 0 }}
       transition={{ duration: 0.92, ease: [0.22, 1, 0.36, 1] }}
-      className="relative h-[50vh]"
+      className="relative h-[45vh]"
       style={{
         maskImage:
           "linear-gradient(to bottom, transparent, black 28%, black 72%, transparent)",

@@ -99,14 +99,13 @@ pageGeometry.setAttribute(
   new Float32BufferAttribute(skinWeights, 4),
 );
 
-const PAGE_BASE_COLOR = "#fff4e8";
 const HOVER_TINT_COLOR = new Color("#ffd9b0");
 
 const pageMaterials = [
-  new MeshBasicMaterial({ color: PAGE_BASE_COLOR, toneMapped: false }),
+  new MeshBasicMaterial({ color: "#b89a6e", toneMapped: false }), // tranche gauche
   new MeshBasicMaterial({ color: "#111", toneMapped: false }),
-  new MeshBasicMaterial({ color: PAGE_BASE_COLOR, toneMapped: false }),
-  new MeshBasicMaterial({ color: PAGE_BASE_COLOR, toneMapped: false }),
+  new MeshBasicMaterial({ color: "#b89a6e", toneMapped: false }), // tranche haut
+  new MeshBasicMaterial({ color: "#b89a6e", toneMapped: false }), // tranche bas
 ];
 
 type PageProps = PageData & {

@@ -82,7 +82,7 @@ const HomePageMobile = ({ isRevealed }: HomePageMobileProps) => {
               coordination de chantier.
             </motion.p>
           </div>
-          <div className="mt-4 overflow-hidden text-center">
+          <div className="-mt-2 overflow-hidden text-center">
             <motion.button
               custom={0.3}
               initial="hidden"

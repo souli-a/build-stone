@@ -1,4 +1,5 @@
 import { useLenis } from "lenis/react";
+import { motion } from "motion/react";
 import { useRef } from "react";
 
 const FADE_RANGE_VH = 0.4;
@@ -30,7 +31,7 @@ const HomePageDesktop = () => {
           aria-hidden="true"
           draggable={false}
           fetchPriority="high"
-          className="absolute top-0 left-0 h-[130vh] w-full object-cover will-change-transform"
+          className="absolute top-0 left-0 w-full object-cover will-change-transform"
         />
         <div className="relative flex flex-col items-center justify-center h-full w-full font-serif text-cream">
           <div className="flex flex-col items-start w-fit">
@@ -42,6 +43,24 @@ const HomePageDesktop = () => {
                 <span className="text-build-stone text-42">.</span>
               </h2>
               <hr className="my-3 h-px border-none bg-linear-to-r from-border to-transparent w-73" />
+            </div>
+            <div className="mt-6 w-full text-center">
+              <button
+                type="button"
+                className="cursor-pointer text-6xl text-cream"
+              >
+                <motion.span
+                  className="inline-block will-change-transform"
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{
+                    duration: 1.8,
+                    ease: [0.45, 0, 0.55, 1],
+                    repeat: Infinity,
+                  }}
+                >
+                  ↓
+                </motion.span>
+              </button>
             </div>
           </div>
 

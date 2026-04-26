@@ -21,8 +21,9 @@ const textRevealVariants = {
 };
 
 const BOOK_BREAKPOINT = 1000;
-const BOOK_CAMERA_Z = 8;
-const MOBILE_BOOK_SCALE = 1.4;
+const MOBILE_BOOK_CAMERA_Z = 13;
+const DESKTOP_BOOK_CAMERA_Z = 10.5;
+const MOBILE_BOOK_SCALE = 1.9;
 const DESKTOP_BOOK_SCALE = 2;
 const BOOK_FLOATING_RANGE: [number, number] = [-0.004, 0.004];
 const BOOK_FLOAT_INTENSITY = 0.18;
@@ -102,6 +103,9 @@ const Book = () => {
   }, []);
 
   const bookScale = isLargeViewport ? DESKTOP_BOOK_SCALE : MOBILE_BOOK_SCALE;
+  const cameraZ = isLargeViewport
+    ? DESKTOP_BOOK_CAMERA_Z
+    : MOBILE_BOOK_CAMERA_Z;
   const canvasTouchAction = isLargeViewport
     ? DESKTOP_TOUCH_ACTION
     : MOBILE_TOUCH_ACTION;
@@ -110,7 +114,7 @@ const Book = () => {
     <section ref={sectionRef} className="relative w-full bg-cream">
       <BookPath />
       <div className="mx-auto flex max-w-6xl flex-col px-6 pt-24 pb-12 md:px-12 md:pt-32 relative">
-        <header className="relative z-10 max-w-xl -mb-[18vh] min-[600px]:max-w-110 min-[600px]:mx-auto min-[600px]:w-full min-[600px]:-mb-[14vh]">
+        <header className="relative z-10 max-w-xl mb-[-18vh] min-[600px]:max-w-110 min-[600px]:mx-auto min-[600px]:w-full min-[600px]:mb-[-14vh]">
           <div className="overflow-hidden mb-4">
             <motion.p
               custom={0}
@@ -152,16 +156,15 @@ const Book = () => {
           </div>
         </header>
 
-        <div className="relative h-[80vh] min-h-125 w-full touch-pan-y md:h-[88vh] md:min-h-180">
+        <div
+          className="relative -mx-6 h-[85vh] min-h-125 touch-pan-y md:mx-0 md:h-[95vh] md:min-h-180"
+          style={{ filter: "drop-shadow(0px 8px 32px rgba(80, 45, 10, 0.30))" }}
+        >
           <PageFlipAudio />
           <Loader />
           <Canvas
-            camera={{ position: [0, 0, BOOK_CAMERA_Z], fov: 45 }}
-            style={{
-              touchAction: canvasTouchAction,
-              filter:
-                "drop-shadow(0 2px 2px rgba(41,41,41,0.18)) drop-shadow(0 22px 28px rgba(41,41,41,0.22))",
-            }}
+            camera={{ position: [0, 0, cameraZ], fov: 33 }}
+            style={{ touchAction: canvasTouchAction }}
           >
             <Suspense fallback={null}>
               <Float
@@ -181,7 +184,7 @@ const Book = () => {
           </Canvas>
         </div>
 
-        <div className="relative z-10 -mt-[15vh] min-[600px]:max-w-110 min-[600px]:mx-auto min-[600px]:w-full min-[600px]:-mt-[11vh]">
+        <div className="relative z-10 mt-[-15vh] min-[600px]:max-w-110 min-[600px]:mx-auto min-[600px]:w-full min-[600px]:mt-[-11vh]">
           <Pagination />
         </div>
       </div>

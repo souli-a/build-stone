@@ -25,7 +25,7 @@ const STAGES: readonly Stage[] = [
   {
     number: "01.",
     title: "Analyse du projet.",
-    description: "Étude des besoins et contraintes techniques.",
+    description: "Étude des besoins et contraintes.",
     side: "left",
   },
   {
@@ -37,7 +37,7 @@ const STAGES: readonly Stage[] = [
   {
     number: "03.",
     title: "Planification.",
-    description: "Organisation du chantier et coordination des intervenants.",
+    description: "Organisation et coordination du chantier.",
     side: "left",
   },
   {
@@ -63,7 +63,7 @@ const DOTS: readonly DotPos[] = [
 ];
 
 const TEXT_POS: readonly TextPos[] = [
-  { top: "15%", left: "-70px", width: "120px" },
+  { top: "15%", left: "-70px", width: "100px" },
   { top: "27%", right: "-90px", width: "140px" },
   { top: "40%", left: "-70px", width: "150px" },
   { top: "55%", right: "-90px", width: "140px" },
