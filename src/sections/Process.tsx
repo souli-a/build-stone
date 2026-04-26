@@ -390,6 +390,7 @@ const Process = () => {
                     left: pos.left,
                     right: pos.right,
                     width: pos.width,
+                    minWidth: "150px",
                   }}
                 >
                   <div className="overflow-hidden mb-2">
