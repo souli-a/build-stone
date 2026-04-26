@@ -113,6 +113,7 @@ const computeDotLengths = (path: SVGPathElement, total: number): number[] => {
 const Process = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const stickyRef = useRef<HTMLDivElement>(null);
   const [isRevealed, setIsRevealed] = useState(false);
 
   useEffect(() => {
@@ -160,17 +161,22 @@ const Process = () => {
       const frame = frameRef.current;
       const header = headerRef.current;
       const section = sectionRef.current;
-      if (!frame || !header || !section) return;
+      const sticky = stickyRef.current;
+      if (!frame || !header || !section || !sticky) return;
 
       const vh = window.innerHeight;
       const headerH = header.offsetHeight;
-      const availH = Math.max(
-        0,
-        vh - headerH - FRAME_TOP_OFFSET - FRAME_BOTTOM_OFFSET,
-      );
+      const availH =
+        sticky.clientHeight - headerH - FRAME_TOP_OFFSET - FRAME_BOTTOM_OFFSET;
 
-      const H = Math.round(availH / 2) * 2;
-      const W = Math.round((H * 380) / 900 / 2) * 2;
+      let H = Math.round(availH / 2) * 2;
+      let W = Math.round((H * 380) / 900 / 2) * 2;
+
+      const MIN_WIDTH = 280;
+      if (W < MIN_WIDTH) {
+        W = MIN_WIDTH;
+        H = Math.round((W * 900) / 380 / 2) * 2;
+      }
 
       frame.style.height = `${H}px`;
       frame.style.width = `${W}px`;
@@ -195,6 +201,7 @@ const Process = () => {
     };
 
     measure();
+    const rafId = requestAnimationFrame(measure);
     window.addEventListener("resize", handleResize);
 
     const fillPath = fillRef.current;
@@ -207,7 +214,10 @@ const Process = () => {
       dotLengthsRef.current = computeDotLengths(fillPath, total);
     }
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useLenis((lenis) => {
@@ -259,6 +269,7 @@ const Process = () => {
   return (
     <section ref={sectionRef} className="relative h-[300vh] bg-cream">
       <div
+        ref={stickyRef}
         className="sticky top-0 h-svh overflow-hidden flex flex-col items-center pt-20"
         style={{ transform: "translateZ(0)" }}
       >
