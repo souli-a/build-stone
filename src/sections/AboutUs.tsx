@@ -14,17 +14,17 @@ const SCROLL_RANGE_VH = 4;
 const PHRASES = [
   <>
     Build Stone est née de la rencontre de professionnels du BTP partageant une
-    même exigence : la maîtrise du savoir-faire et la{" "}
-    <b>qualité d&apos;exécution</b>.
+    même exigence : la maîtrise du savoir-faire et la <b>qualité d'exécution</b>
+    .
   </>,
   <>
     Nous rassemblons des expertises complémentaires portées par des{" "}
-    <b>collaborateurs qualifiés</b>, forgés sur des projets d&apos;envergure et
-    des chantiers à forte technicité.
+    <b>collaborateurs qualifiés</b>, forgés sur des projets d'envergure et des
+    chantiers à forte technicité.
   </>,
   <>
-    Notre force repose sur cette complémentarité de compétences,
-    l&apos;expérience terrain ainsi qu&apos;une <b>organisation rigoureuse</b>.
+    Notre force repose sur cette complémentarité de compétences, l'expérience
+    terrain ainsi qu'une <b>organisation rigoureuse</b>.
   </>,
   <>
     Le tout au service de la <b>réussite</b> de chaque projet.

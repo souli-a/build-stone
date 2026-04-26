@@ -63,18 +63,16 @@ const DOTS: readonly DotPos[] = [
 ];
 
 const TEXT_POS: readonly TextPos[] = [
-  { top: "5%", left: "-12%", width: "40%" },
-  { top: "17%", right: "-14.5%", width: "45%" },
-  { top: "38%", left: "-12%", width: "48%" },
-  { top: "59%", right: "-14.5%", width: "44%" },
-  { top: "70%", left: "-12%", width: "43%" },
+  { top: "15%", left: "-70px", width: "120px" },
+  { top: "27%", right: "-90px", width: "140px" },
+  { top: "40%", left: "-70px", width: "150px" },
+  { top: "55%", right: "-90px", width: "140px" },
+  { top: "62%", left: "-70px", width: "140px" },
 ];
 
 const LINE_PATH =
   "M 242 95 C 198 150 86 207 128 265 C 170 323 268 375 232 440 C 196 505 88 558 148 615 C 208 672 262 732 225 795";
 
-const FRAME_TOP_OFFSET = 80;
-const FRAME_BOTTOM_OFFSET = 16;
 const FINAL_STAGE_SCROLL_BUFFER_RATIO = 0.06;
 
 const TEXT_TRANSITION = "transform 620ms cubic-bezier(0.22,1,0.36,1)";
@@ -116,24 +114,6 @@ const Process = () => {
   const stickyRef = useRef<HTMLDivElement>(null);
   const [isRevealed, setIsRevealed] = useState(false);
 
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 },
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   const frameRef = useRef<HTMLDivElement>(null);
   const fillRef = useRef<SVGPathElement>(null);
   const totalLengthRef = useRef(0);
@@ -154,73 +134,7 @@ const Process = () => {
     STAGES.map(() => [null, null, null]),
   );
 
-  useEffect(() => {
-    let lastWidth = window.innerWidth;
-
-    const measure = () => {
-      const frame = frameRef.current;
-      const header = headerRef.current;
-      const section = sectionRef.current;
-      const sticky = stickyRef.current;
-      if (!frame || !header || !section || !sticky) return;
-
-      const vh = window.innerHeight;
-      const headerH = header.offsetHeight;
-      const availH =
-        sticky.clientHeight - headerH - FRAME_TOP_OFFSET - FRAME_BOTTOM_OFFSET;
-
-      let H = Math.round(availH / 2) * 2;
-      let W = Math.round((H * 380) / 900 / 2) * 2;
-
-      const MIN_WIDTH = 280;
-      if (W < MIN_WIDTH) {
-        W = MIN_WIDTH;
-        H = Math.round((W * 900) / 380 / 2) * 2;
-      }
-
-      frame.style.height = `${H}px`;
-      frame.style.width = `${W}px`;
-
-      const maxScroll = Math.max(0, section.offsetHeight - vh);
-      const scrollBuffer = Math.round(
-        maxScroll * FINAL_STAGE_SCROLL_BUFFER_RATIO,
-      );
-
-      sectionMetricsRef.current = {
-        top: section.offsetTop,
-        maxScroll,
-        animationScroll: Math.max(0, maxScroll - scrollBuffer),
-      };
-    };
-
-    const handleResize = () => {
-      if (window.innerWidth !== lastWidth) {
-        lastWidth = window.innerWidth;
-        measure();
-      }
-    };
-
-    measure();
-    const rafId = requestAnimationFrame(measure);
-    window.addEventListener("resize", handleResize);
-
-    const fillPath = fillRef.current;
-    if (fillPath) {
-      const total = fillPath.getTotalLength();
-      totalLengthRef.current = total;
-      fillPath.style.strokeDasharray = String(total);
-      fillPath.style.strokeDashoffset = String(total);
-      lastDashRef.current = Math.round(total);
-      dotLengthsRef.current = computeDotLengths(fillPath, total);
-    }
-
-    return () => {
-      cancelAnimationFrame(rafId);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useLenis((lenis) => {
+  const runScrollUpdate = (scrollY: number) => {
     const fillPath = fillRef.current;
     const total = totalLengthRef.current;
     if (!fillPath || !total) return;
@@ -228,7 +142,7 @@ const Process = () => {
     const { top: sectionTop, animationScroll } = sectionMetricsRef.current;
     if (animationScroll <= 0) return;
 
-    const scrollInSection = Math.round(lenis.scroll - sectionTop);
+    const scrollInSection = Math.round(scrollY - sectionTop);
     const progress = Math.max(
       0,
       Math.min(1, scrollInSection / animationScroll),
@@ -264,13 +178,114 @@ const Process = () => {
       if (texts[1]) texts[1].style.transform = y;
       if (texts[2]) texts[2].style.transform = y;
     }
+  };
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsRevealed(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    let lastWidth = window.innerWidth;
+    const rafIds: number[] = [];
+    const timeoutIds: number[] = [];
+
+    const measure = () => {
+      const section = sectionRef.current;
+      if (!section) return;
+
+      const vh = window.innerHeight;
+      const maxScroll = Math.max(0, section.offsetHeight - vh);
+      const scrollBuffer = Math.round(
+        maxScroll * FINAL_STAGE_SCROLL_BUFFER_RATIO,
+      );
+
+      sectionMetricsRef.current = {
+        top: section.offsetTop,
+        maxScroll,
+        animationScroll: Math.max(0, maxScroll - scrollBuffer),
+      };
+    };
+
+    const handleResize = () => {
+      if (window.innerWidth !== lastWidth) {
+        lastWidth = window.innerWidth;
+        measure();
+      }
+    };
+
+    measure();
+    rafIds.push(requestAnimationFrame(measure));
+    timeoutIds.push(window.setTimeout(measure, 100));
+    timeoutIds.push(window.setTimeout(measure, 500));
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(measure).catch(() => {});
+    }
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", measure);
+
+    const fillPath = fillRef.current;
+    if (fillPath) {
+      const total = fillPath.getTotalLength();
+      totalLengthRef.current = total;
+      fillPath.style.strokeDasharray = String(total);
+      fillPath.style.strokeDashoffset = String(total);
+      lastDashRef.current = Math.round(total);
+      dotLengthsRef.current = computeDotLengths(fillPath, total);
+    }
+
+    return () => {
+      rafIds.forEach(cancelAnimationFrame);
+      timeoutIds.forEach(clearTimeout);
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", measure);
+    };
+  }, []);
+
+  useLenis((lenis) => {
+    runScrollUpdate(lenis.scroll);
   });
+
+  useEffect(() => {
+    let rafId = 0;
+    let pending = false;
+
+    const onScroll = () => {
+      if (pending) return;
+      pending = true;
+      rafId = requestAnimationFrame(() => {
+        pending = false;
+        runScrollUpdate(window.scrollY);
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
 
   return (
     <section ref={sectionRef} className="relative h-[300vh] bg-cream">
       <div
         ref={stickyRef}
-        className="sticky top-0 h-svh overflow-hidden flex flex-col items-center pt-20"
+        className="sticky top-0 overflow-hidden flex flex-col items-center pt-8 -mb-20"
         style={{ transform: "translateZ(0)" }}
       >
         <header ref={headerRef} className="text-center mb-2 shrink-0">
@@ -294,7 +309,7 @@ const Process = () => {
                 variants={headerRevealVariants}
                 className="block will-change-transform"
               >
-                De <em>l&apos;idée</em>
+                De <em>l'idée</em>
               </motion.span>
             </span>
             <span className="block overflow-hidden">
@@ -312,8 +327,11 @@ const Process = () => {
           </h1>
         </header>
 
-        <div className="relative flex-1 min-h-0 w-full flex items-center justify-center">
-          <div ref={frameRef} className="relative">
+        <div className="relative w-full flex items-start justify-center overflow-hidden -mt-10">
+          <div
+            ref={frameRef}
+            className="relative w-[180px] aspect-[180/620] -mt-10"
+          >
             <svg
               viewBox="0 0 380 900"
               className="absolute inset-0 w-full h-full pointer-events-none"
@@ -390,7 +408,6 @@ const Process = () => {
                     left: pos.left,
                     right: pos.right,
                     width: pos.width,
-                    minWidth: "150px",
                   }}
                 >
                   <div className="overflow-hidden mb-2">
@@ -428,7 +445,7 @@ const Process = () => {
                       ref={(el) => {
                         textRefs.current[i][2] = el;
                       }}
-                      className="font-sans font-light text-sm tracking-tight leading-5 text-muted will-change-transform"
+                      className="font-sans font-light text-sm tracking-tight leading-[105%] text-muted will-change-transform"
                       style={{
                         transform: "translateY(130%)",
                         transition: TEXT_TRANSITION,
