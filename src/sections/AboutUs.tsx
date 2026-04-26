@@ -10,6 +10,7 @@ const TITLE_MIN_OPACITY = 0.05;
 const TITLE_FADE_AMOUNT = 1 - TITLE_MIN_OPACITY;
 
 const SCROLL_RANGE_VH = 4;
+const BAND_FADE_IN_VH = 0.4;
 
 const PHRASES = [
   <>
@@ -87,6 +88,12 @@ const AboutUs = () => {
       isBandVisible.current = true;
     }
 
+    const bandOpacity = Math.min(
+      1,
+      scrollInSection / (BAND_FADE_IN_VH * viewportHeight.current),
+    );
+    band.style.opacity = String(bandOpacity);
+
     const maxScroll = section.offsetHeight - viewportHeight.current;
     const shouldUnpin = scrollInSection >= maxScroll - 1;
 
@@ -103,7 +110,6 @@ const AboutUs = () => {
     }
 
     const phase1 = Math.min(1, progress / TITLE_IN_END);
-    band.style.clipPath = `inset(${(1 - phase1) * 50}% 0)`;
     title.style.transform = `scale(${0.5 + phase1 * 0.5})`;
 
     let titleOpacity: number;
@@ -159,11 +165,11 @@ const AboutUs = () => {
   });
 
   return (
-    <div ref={sectionRef} className="relative h-[500vh] text-border">
+    <div ref={sectionRef} className="relative h-[500vh] text-text">
       <div
         ref={bandRef}
-        className="fixed inset-0 z-50 overflow-hidden bg-bg-dark"
-        style={{ clipPath: "inset(50% 0)", display: "none" }}
+        className="fixed inset-0 z-50 overflow-hidden bg-cream"
+        style={{ display: "none", opacity: 0 }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <h1
