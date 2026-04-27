@@ -1,8 +1,8 @@
 import { useLenis } from "lenis/react";
 import { useEffect, useRef } from "react";
 
-const TITLE_IN_END = 0.4;
-const TITLE_OUT_END = 0.6;
+const TITLE_IN_END = 0.1;
+const TITLE_OUT_END = 0.2;
 const PHRASES_START = TITLE_OUT_END;
 const PHRASES_END = 1.0;
 
